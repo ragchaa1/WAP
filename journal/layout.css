@@ -1,0 +1,41 @@
+body {
+    background-image: url("img/background.gif");
+
+}
+#container {
+    border: solid 10px white;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#header {
+    background-color: #A8F0F0;
+    text-align: right;
+}
+.description {
+    font-size: 14pt;
+}
+.entry {
+    border: solid 4px #C2E9E9;
+    border-radius: 15px;
+    background-color: #E8FBFB;
+    padding: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    margin-left: 165px;
+}
+
+.entry img {
+    float: right;
+}
+.date {
+    border: dashed 2px blue;
+}
+.friends {
+    border: solid 4px lightblue;
+    border-radius: 15px;
+    margin-top: 10px;
+    float: left;
+    background-color: #A8F9F9;
+
+}
