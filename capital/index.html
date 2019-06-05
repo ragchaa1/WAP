@@ -2,9 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Apply for Capita One card</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="banner">
+    <div id="topbanner">
+        <img src="img/cof-logo.png">
+    </div>
+</div>
+<div class="bottombanner">
+    <div id="bannerContainer">
+        <h1>
+            <p>Guaranteed Low Rate Mastercard®</p>
+            <small><p>With a 14.9% Interest Rate</p></small>
+        </h1>
+    </div><!--
+    <span class="verticalLine"></span>-->
+
+</div>
+
+<div class="container">
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="cardImage">
+                <img src="img/card-en.png" alt="Quicksilver One Card">
+            </div>
+
+            <div class="entry">
+                <label for="fname">First Name</label><br>
+                <input size="21" type="text" pattern="^[a-zA-Z]+$" title="Name must be all letters" name="fname"
+                       id="fname" required="">
+            </div>
+
+            <div class="entry">
+                <label for="lname">Last Name</label><br>
+                <input size="21" type="text" pattern="^[a-zA-Z]+$" title="Name must be all letters" name="lname"
+                       id="lname" required="">
+            </div>
+
+            <div class="entry">
+                <label for="dob">Date Of Birth</label><br>
+                <input size="21" id="dob" type="date" name="dob" required="">
+            </div>
+
+            <div class="entry">
+                <label for="mother">Mother’s Maiden Name</label><br>
+                <input size="21" type="text" pattern="^[a-zA-Z]+$" title="Name must be all letters" name="mother"
+                       id="mother" required="">
+            </div>
+
+            <div class="entry">
+                <label for="ssn">Social Insurance Number(Optional)</label><br>
+                <input size="21" type="text" pattern="^\d{7}$" title="SSN must be 7 digit number" name="ssn" required=""
+                       id="ssn">
+            </div>
+
+            <div class="entry">
+                <label for="ssn">How did you learn about this card? (Optional)</label><br>
+                <input size="21" type="text" pattern="^\d{7}$" title="SSN must be 7 digit number" name="ssn" required=""
+                       id="ssn">
+            </div>
+
+            <hr>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div class="entry">
+                <label>RESIDENTIAL ADDRESS (No PO Boxes or CMRA)</label><br>
+                <input type="text" name="addr" required="">
+            </div>
+
+            <div class="entry">
+                <label>SUITE/APT. # (if applicable)</label><br>
+                <input type="text" name="apt">
+            </div>
+
+
+            <div class="entry email">
+                <label for="email">EMAIL ADDRESS</label><br>
+                <input type="text" id="email" name="email" pattern="^[a-zA-Z]+.*@[a-zA-Z]+(\..*)*\.[a-z]{2,4}$"
+                       required=""><br>
+            </div>
+            <div class="entry">
+                <label for="phone">PRIMARY PHONE NUMBER</label><br>
+                <input type="text" name="phone" id="phone"><br>
+            </div>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Authorized User</legend>
+            <div class="entry">
+                <p>Yes! I would like to add an Authorized User (AU) to my account and receive a second card with their name on it.</p>
+            </div>
+        </fieldset>
+        <hr>
+
+        <fieldset>
+            <legend>Employment Information</legend>
+            <div class="entry">
+                <p>Yes! I would like to add an Authorized User (AU) to my account and receive a second card with their name on it.</p>
+            </div>
+        </fieldset>
+        <hr>
+        <fieldset>
+            <legend>Financial Information</legend>
+            <div class="entry">
+                <label for="accnt">DO YOU HAVE ANY BANK ACCOUNTS?</label><br>
+                <select id="accnt" name="accountType" required="">
+                    <option value="" disabled="" selected="">Select type</option>
+                    <option value="c&amp;s">Checking and Savings</option>
+                    <option value="c">Checking Only</option>
+                    <option value="s">Saving Only</option>
+                    <option value="n">Neither</option>
+                </select>
+            </div>
+
+            <div class="entry">
+                <label for="emplmnt">EMPLOYMENT STATUS</label><br>
+                <select id="emplmnt" name="accountType" required="">
+                    <option value="" disabled="" selected="">Select status</option>
+                    <option value="em">Employed</option>
+                    <option value="se">Self-Employed</option>
+                    <option value="re">Retired</option>
+                    <option value="st">Student</option>
+                    <option value="un">Unemployed</option>
+                </select>
+            </div>
+        </fieldset>
+        <hr>
+
+
+        <input id="submit" type="submit" value="Review My Application">
+
+    </form>
+</div>
+
 
 </body>
 </html>
