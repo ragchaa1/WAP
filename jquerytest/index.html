@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The JQuery Example</title>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" language="javascript">
+        var i = 0;
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                $("li").eq(i).addClass("selected");
+                i++;
+            })
+
+            $("#niil").click(function () {
+                var too = $("#too").val();
+                var too2 = $("#too2").val();
+                var result = parseInt(too) + parseInt(too2);
+                $("#r").text(result);
+
+            });
+
+            $("#sex").click(function () {
+                var s = $("input[name=gender]:checked").val();
+
+                alert(s);
+            });
+
+            $("#ajax").click(function () {
+
+                $.getJSON("test.json", function (result) {
+                    $.each(result.students, function (i, field) {
+                        console.log("i " + i);
+                        $("#utga").append("<tr><td>" + field.name + "</td><td>" + field.class + "</td></tr>");
+                    })
+                })
+            })
+        });
+    </script>
+
+    <style>
+        .selected {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+    </ul>
+
+    <p><input type="text" width="20" id="too">
+        <input type="text" width="20" id="too2"></p>
+    <p id="r"></p>
+
+    <p>
+        <button id="niil">Sum</button>
+    </p>
+
+</div>
+
+<button id="btn">Click</button>
+
+<hr>
+<input type="radio" name="gender" id="m" value="male">Male
+<input type="radio" name="gender" id="f" value="female">Famale
+
+<button id="sex">sex</button>
+<br>
+
+<button id="ajax">Ajax</button>
+<br>
+<div id="content"></div>
+
+<table id="utga" border="1">
+    <tr>
+        <td>Name</td>
+        <td>Class</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
